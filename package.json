@@ -1,0 +1,21 @@
+{
+  "name": "gulp-project",
+  "version": "1.0.0",
+  "description": "First Gulp Project",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-jade": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglifyjs": "latest",
+    "node-bourbon": "latest"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "gulp-babel": "^6.1.2"
+  }
+}
