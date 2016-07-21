@@ -68,7 +68,7 @@ var distructuring = {
 		function getRandomInterval(min, max) {
 			return Math.random() * (max - min) + min;
 		}
-		ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+		ctx.fillStyle = "rgba(255, 255, 255, " + getRandomInterval(0.1, 0.3) + ")";
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.fillRect(getRandomInterval(1, 900), getRandomInterval(1, 450), getRandomInterval(1, 10), getRandomInterval(1, 10));
 
