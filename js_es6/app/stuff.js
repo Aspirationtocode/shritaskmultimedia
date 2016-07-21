@@ -2,6 +2,7 @@ let videoBlock = $('.video-block'),
 			infContainer = $('.information-block'),
 			video = document.querySelector('.video-block__video'),
 			canvas = document.querySelector('.video-block__canvas'),
+			attritionCanvas = document.querySelector('.video-block__canvas_attrition'),
 			audio = document.querySelector('.video-block__audio'),
 			subtitle = document.querySelector('.video-block__subtitle'),
 			form = $('.information-block__form'),
@@ -23,8 +24,10 @@ let videoBlock = $('.video-block'),
 		cue.onenter = function() {
 			video.pause();
 			video.classList.add('tracked');
+			attritionCanvas.classList.add('opacitied');
 			setTimeout(() => {
 				video.classList.remove('tracked');
+				attritionCanvas.classList.remove('opacitied');
 				video.play();
 			}, delays[this.id - 1] * 1000);
 		}

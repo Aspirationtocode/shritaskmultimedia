@@ -4,6 +4,7 @@ var videoBlock = $('.video-block'),
     infContainer = $('.information-block'),
     video = document.querySelector('.video-block__video'),
     canvas = document.querySelector('.video-block__canvas'),
+    attritionCanvas = document.querySelector('.video-block__canvas_attrition'),
     audio = document.querySelector('.video-block__audio'),
     subtitle = document.querySelector('.video-block__subtitle'),
     form = $('.information-block__form'),
@@ -26,8 +27,10 @@ for (var i = 0; i < cues.length; i++) {
 	cue.onenter = function () {
 		video.pause();
 		video.classList.add('tracked');
+		attritionCanvas.classList.add('opacitied');
 		setTimeout(function () {
 			video.classList.remove('tracked');
+			attritionCanvas.classList.remove('opacitied');
 			video.play();
 		}, delays[this.id - 1] * 1000);
 	};

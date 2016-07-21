@@ -74,6 +74,19 @@
 		  // Draw the rectangle.
 		  ctx.drawArrays(ctx.TRIANGLES, 0, 6);
 		},
+		computeAttrition() {
+			var ctx = attritionCanvas.getContext('2d');
+	  	function getRandomInterval(min, max) {
+			  return Math.random() * (max - min) + min;
+			}
+			ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+	    ctx.fillRect(getRandomInterval(1, 900), getRandomInterval(1, 450), getRandomInterval(1, 10), getRandomInterval(1, 10))
+	    
+	    
+
+	    return;
+	  },
 
 	  timerCallback() { 
 	  	
@@ -83,8 +96,13 @@
 	    	}  	
 	      return;  
 	    }  
+			
+	    // attrition
+			this.computeAttrition();
+
 			// grayscaleVideo
 	  	this.grayScaleVideo();
+
 	   	// rAF
 	    window.requestAnimationFrame(() => {
 	  		this.timerCallback();

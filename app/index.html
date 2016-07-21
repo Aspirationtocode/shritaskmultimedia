@@ -34,7 +34,7 @@
 <body>
 	<div class="information-block">
 			<h2 class="information-block__header"> 
-Киноглушитель<img src="../img/gun.png" class="information-block__img"></h2>
+Киноглушитель<img src="img/gun.png" class="information-block__img"></h2>
 			<form class="information-block__form">
 					<input type="text" name="videosrc" placeholder="Ссылка на видео" required value="https://cache-default06h.cdn.yandex.net/kp.cdn.yandex.net/502838/kinopoisk.ru-Sherlock-284167.mp4" class="information-block__input">
 					<input type="text" name="subtitlesrc" placeholder="Ссылка на субтитры" required class="information-block__input" value='../video/subs.vtt'>
@@ -45,9 +45,10 @@
 	<div class="video-block">
 			<video width="900" height="450" crossorigin="" muted class="video-block__video">
 					<source src="" type="video/mp4" crossorigin="">
-							<track class='video-block__subtitle' src="../video/subs.vtt" label="Russian" kind="subtitles" srclang="ru" default crossorigin="">
+							<track class='video-block__subtitle' src="video/subs.vtt" label="Russian" kind="subtitles" srclang="ru" default crossorigin="">
 			</video>
 			<canvas width="900" height="450" class="video-block__canvas" crossorigin=""></canvas>
+			<canvas width="900" height="450" class="video-block__canvas_attrition" crossorigin=""></canvas>
 			<div class="video-block__button">Выбрать другое видео</div>
 			<audio src="" loop class="video-block__audio" crossorigin=""></audio>
 	</div>
